@@ -63,7 +63,7 @@ public class DilikaausiyaminiStore {
 
                     break; // Exit ang loop pag satisfy ang condition
                 } catch (NumberFormatException e) {
-                    JOptionPane.showMessageDialog(null, "Please enter a valid whole number for quantity.", "Invalid Quantity", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "WHOLE NUMBER LANG ANG PWEDE.", "OPPSSSS DILI NA PWEDE", JOptionPane.WARNING_MESSAGE);
                 }
             }
 
