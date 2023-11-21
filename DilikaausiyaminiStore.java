@@ -50,10 +50,11 @@ public class DilikaausiyaminiStore {
                         if (quantity > 0) {
                             isValidQuantity = true;
                         } else {
-                            JOptionPane.showMessageDialog(null, "Please enter a valid positive whole number for the quantity.", "Invalid Quantity", JOptionPane.WARNING_MESSAGE);
+                            JOptionPane.showMessageDialog(null, "Whole number lang ang pwede"
+                                    + ".", "Invalid Quantity", JOptionPane.WARNING_MESSAGE);
                         }
                     } else {
-                        JOptionPane.showMessageDialog(null, "Please enter a valid positive whole number for the quantity.", "Invalid Quantity", JOptionPane.WARNING_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Whole number lang ang pwede.", "Invalid Quantity", JOptionPane.WARNING_MESSAGE);
                     }
                 }
 
