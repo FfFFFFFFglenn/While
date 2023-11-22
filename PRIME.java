@@ -13,7 +13,7 @@ public class PRIME {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Please Enter a Number: ");
+        System.out.print("Please Enter a Positive Number: ");
         int number = input.nextInt();
         boolean prime = true;
         int a = 2;
