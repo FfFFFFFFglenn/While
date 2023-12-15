@@ -1,8 +1,14 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
 package com.mycompany.geometrycalculator;
 
-import java.time.temporal.TemporalAdjusters;
 import java.util.Scanner;
 
+/**
+ *
+ * @author Acer
+ */
 public class GeometryCalculator {
 
     public static void main(String[] args) {
