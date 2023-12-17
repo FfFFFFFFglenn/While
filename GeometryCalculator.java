@@ -19,7 +19,7 @@ public class GeometryCalculator {
             System.out.println("Welcome to PAVSA- Geometry Calculator\n");
             System.out.println("Option to Calulate");
 
-            System.out.print("1: Calculate Perimeter\n" + "2: Calculate Area\n" + "3: Calcualate Volume\n" + "4: Calculate surface area (3D shape)\n" + "5: Exit\n");
+            System.out.print("1: Calculate Perimeter\n" + "2: Calculate Area\n" + "3: Calculate Volume\n" + "4: Calculate surface area (3D shape)\n" + "5: Exit\n");
 
             Enter();
             int a = input.nextInt();
@@ -43,9 +43,9 @@ public class GeometryCalculator {
                         } else if (g == 4) {
                             TrapezoidP(input);
                         } else if (g == 5) {
-                            SquareP(input);
+                            RhombusP(input);
                         } else if (g == 6) {
-                            RectangleP(input);
+                            ParallelogramP(input);
                         } else if (g == 7) {
                             CirclrP(input);
                         } else if (g == 8) {
@@ -75,7 +75,7 @@ public class GeometryCalculator {
                         } else if (h == 5) {
                             RhombusA(input);
                         } else if (h == 6) {
-                            RhombusA(input);
+                            ParallelogramA(input);
                         } else if (h == 7) {
                             CircleA(input);
                         }
@@ -151,17 +151,35 @@ public class GeometryCalculator {
         double Length = input.nextDouble();
         System.out.print("Enter the measurement of the width: ");
         double Width = input.nextDouble();
-        double ans = (Length + Width) * 2;
+        double perimeter = (Length + Width) * 2;
         System.out.println("  ");
-        System.out.println("The perimeter of the recatngle/parallegram is: " + ans);
+        System.out.println("The perimeter of the parallegram is: " + perimeter);
+    }
+    
+    static void ParallelogramP(Scanner input) {
+        System.out.print("Enter the measurement of the lenght: ");
+        double Length = input.nextDouble();
+        System.out.print("Enter the measurement of the width: ");
+        double Width = input.nextDouble();
+        double perimeter = (Length + Width) * 2;
+        System.out.println("  ");
+        System.out.println("The perimeter of the parallegram is: " + perimeter);
     }
 
     static void SquareP(Scanner input) {
         System.out.print("Enter the measurement of the side of the square: ");
         double Length = input.nextDouble();
-        double ans = Length * 4;
+        double perimeter = Length * 4;
         System.out.println("  ");
-        System.out.println("The perimeter of the square/square is: " + ans);
+        System.out.println("The perimeter of the squareis: " + perimeter);
+    }
+    
+     static void RhombusP(Scanner input) {
+        System.out.print("Enter the measurement of the side of the square: ");
+        double Length = input.nextDouble();
+        double perimeter = Length * 4;
+        System.out.println("  ");
+        System.out.println("The perimeter of the rhombus is: " + perimeter);
     }
 
     static void TriangleP(Scanner input) {
@@ -171,9 +189,9 @@ public class GeometryCalculator {
         double Second = input.nextDouble();
         System.out.print("Enter the measurement of the 3rd side: ");
         double Third = input.nextDouble();
-        double ans = First + Second + Third;
+        double perimeter = First + Second + Third;
         System.out.println("  ");
-        System.out.println("The perimeter of the triangle is: " + ans);
+        System.out.println("The perimeter of the triangle is: " + perimeter);
     }
 
     static void TrapezoidP(Scanner input) {
@@ -185,9 +203,9 @@ public class GeometryCalculator {
         double Third = input.nextDouble();
         System.out.println("Enter the measurement of the 4th side: ");
         double Fourth = input.nextDouble();
-        double ans = First + Second + Third + Fourth;
+        double perimeter = First + Second + Third + Fourth;
         System.out.println("  ");
-        System.out.println("The perimeter of the trapezoid is: " + ans);
+        System.out.println("The perimeter of the trapezoid is: " + perimeter);
     }
 
     static void CirclrP(Scanner input) {
@@ -228,20 +246,30 @@ public class GeometryCalculator {
 
     static void TriangleA(Scanner input) {
         System.out.print("Enter the measurement of the height: ");
-        double h = input.nextDouble();
+        double height = input.nextDouble();
         System.out.print("Enter the measurement of the base: ");
-        double b = input.nextDouble();
-        double ans = (h * b) * (1.0 / 2.0);
+        double base = input.nextDouble();
+        double ans = (height * base) * (1.0 / 2.0);
         System.out.println("  ");
         System.out.println("The area of the triangle is: " + ans);
     }
 
     static void RhombusA(Scanner input) {
         System.out.print("Enter the measurement of the height: ");
-        double h = input.nextDouble();
+        double height = input.nextDouble();
         System.out.print("Enter the measurement of the base: ");
-        double b = input.nextDouble();
-        double ans = (h * b);
+        double base = input.nextDouble();
+        double ans = (height * base);
+        System.out.println("  ");
+        System.out.println("The area of the Rhombus/parallegram is: " + ans);
+    }
+    
+     static void ParallelogramA(Scanner input) {
+        System.out.print("Enter the measurement of the height: ");
+        double height = input.nextDouble();
+        System.out.print("Enter the measurement of the base: ");
+        double base = input.nextDouble();
+        double ans = (height * base);
         System.out.println("  ");
         System.out.println("The area of the Rhombus/parallegram is: " + ans);
     }
@@ -260,8 +288,8 @@ public class GeometryCalculator {
 
     static void CircleA(Scanner input) {
         System.out.print("Enter the measurement of the radius: ");
-        double r = input.nextDouble();
-        double ans = Math.PI * (r * r);
+        double radius = input.nextDouble();
+        double ans = Math.PI * (radius * radius);
         System.out.println("  ");
         System.out.println("The area of the Rhombus/parallegram is: " + ans);
     }
@@ -334,8 +362,8 @@ public class GeometryCalculator {
         System.out.print("Enter the measurement of the radius: ");
         double radius = input.nextDouble();
         System.out.print("Enter the measurement of the slant height: ");
-        double sh = input.nextDouble();
-        double ans = (Math.PI * radius) * (radius * sh);
+        double slantheight = input.nextDouble();
+        double ans = (Math.PI * radius) * (radius * slantheight);
         System.out.println("  ");
         System.out.println("The total surface area of the cone is: " + ans);
     }
@@ -352,12 +380,12 @@ public class GeometryCalculator {
 
     static void CuboidSA(Scanner input) {
         System.out.print("Enter the measurement of the length: ");
-        double l = input.nextDouble();
+        double length = input.nextDouble();
         System.out.print("Enter the measurement of the width: ");
-        double w = input.nextDouble();
+        double width = input.nextDouble();
         System.out.print("Enter the measurement of the height: ");
-        double h = input.nextDouble();
-        double ans = 2 * (l * w * h);
+        double height = input.nextDouble();
+        double ans = 2 * (length * width * height);
         System.out.println("  ");
         System.out.println("The total surface area of the cuboid is: " + ans);
     }
