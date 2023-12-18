@@ -305,7 +305,7 @@ public class GeometryCalculator {
     static void SphereV(Scanner input) {
         System.out.print("Enter the measurement of the radius: ");
         double Radius = input.nextDouble();
-        double ans = ((4.0 / 3.0) * Math.PI) * (Radius * Radius);
+        double ans = ((4.0 / 3.0) * Math.PI) * (Radius * Radius * Radius);
         System.out.println("  ");
         System.out.println("The volume of the sphere is: " + ans);
     }
@@ -411,5 +411,4 @@ public class GeometryCalculator {
     static void Space() {
         System.out.println("");
     }
-
 }
