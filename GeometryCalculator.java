@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package javaapplication43;
+package com.mycompany.geometrycalculator;
 
 import java.util.Scanner;
 
