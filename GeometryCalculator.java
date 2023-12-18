@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package com.mycompany.geometrycalculator;
+package javaapplication43;
 
 import java.util.Scanner;
 
@@ -50,7 +50,9 @@ public class GeometryCalculator {
                             CirclrP(input);
                         } else if (g == 8) {
                             NagonP(input);
-                        }
+                        } else if (g<1 || g>5){
+                            System.out.println("input is not valid");
+                        };
                         Enter2();
                     } while (input.next().equalsIgnoreCase("yes"));
                     break;
@@ -59,7 +61,7 @@ public class GeometryCalculator {
                 case 2: {
                     do {
                         System.out.println("");
-                        System.out.print("Select Option:\n" + "1. Rectangle\n" + "2. Square\n" + "3. Triangle\n" + "4. Trapezoid\n" + "5. Rhombus\n" + "6. Parallelogram\n" + "7. Cirlcle\n");
+                        System.out.print("Select Option:\n" + "1. Rectangle\n" + "2. Square\n" + "3. Triangle\n" + "4. Trapezoid\n" + "5. Rhombus\n" + "6. Parallelogram\n" + "7. Circle\n");
                         Enter();
                         int h = input.nextInt();
                         Space();
@@ -78,7 +80,9 @@ public class GeometryCalculator {
                             ParallelogramA(input);
                         } else if (h == 7) {
                             CircleA(input);
-                        }
+                        } else if (h<1 || h>5){
+                            System.out.println("input is not valid");
+                        };
                         Enter2();
                     } while (input.next().equalsIgnoreCase("yes"));
                     break;
@@ -102,7 +106,9 @@ public class GeometryCalculator {
                             ConeV(input);
                         } else if (i == 5) {
                             SphereV(input);
-                        }
+                        } else if (i<1 || i>5){
+                            System.out.println("input is not valid");
+                        };
                         Enter2();
                     } while (input.next().equalsIgnoreCase("yes"));
                     break;
@@ -126,7 +132,9 @@ public class GeometryCalculator {
                             ConeSA(input);
                         } else if (j == 5) {
                             SphereSA(input);
-                        }
+                        } else if (j<1 || j>5){
+                            System.out.println("input is not valid");
+                        };
 
                         Enter2();
                     } while (input.next().equalsIgnoreCase("yes"));
